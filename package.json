@@ -28,10 +28,10 @@
     "url": "https://github.com/llaenowyd/storybook-expand-all/issues"
   },
   "homepage": "https://github.com/llaenowyd/storybook-expand-all#readme",
-  "peerDependencies": {
-    "react": ">= 16",
-    "@storybook/addons": ">= 6"
-  },
+  "externals": [
+    "react",
+    "@storybook/addons"
+  ],
   "dependencies": {
     "@babel/cli": "^7.17.10",
     "react": "^18.1.0",
