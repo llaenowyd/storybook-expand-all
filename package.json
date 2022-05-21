@@ -1,0 +1,52 @@
+{
+  "name": "@a110/storybook-expand-all",
+  "version": "1.0.0",
+  "description": "\"A workaround that seems pretty solid\"",
+  "main": "dist/preset.js",
+  "scripts": {
+    "build": "babel ./src --out-dir ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook --no-manager-cache -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/llaenowyd/storybook-expand-all.git"
+  },
+  "keywords": [
+    "storybook",
+    "addons"
+  ],
+  "author": "Collin Monahan <llaenowyd@gmail.com>",
+  "license": "ISC",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "*.js"
+  ],
+  "bugs": {
+    "url": "https://github.com/llaenowyd/storybook-expand-all/issues"
+  },
+  "homepage": "https://github.com/llaenowyd/storybook-expand-all#readme",
+  "peerDependencies": {
+    "react": "*",
+    "@storybook/addons": "*"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.17.10",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.0",
+    "@storybook/addon-actions": "^6.5.3",
+    "@storybook/addon-essentials": "^6.5.3",
+    "@storybook/addon-interactions": "^6.5.3",
+    "@storybook/addon-links": "^6.5.3",
+    "@storybook/builder-webpack4": "^6.5.3",
+    "@storybook/manager-webpack4": "^6.5.3",
+    "@storybook/react": "^6.5.3",
+    "@storybook/testing-library": "^0.0.11",
+    "babel-loader": "^8.2.5"
+  }
+}
