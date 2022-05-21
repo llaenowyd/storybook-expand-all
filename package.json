@@ -29,8 +29,8 @@
   },
   "homepage": "https://github.com/llaenowyd/storybook-expand-all#readme",
   "peerDependencies": {
-    "react": "*",
-    "@storybook/addons": "*"
+    "react": ">= 16",
+    "@storybook/addons": ">= 6"
   },
   "dependencies": {
     "@babel/cli": "^7.17.10",
