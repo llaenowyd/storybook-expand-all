@@ -11,6 +11,8 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
+      - name: version
+        run: yarn version --new-version "${GITHUB_REF:1}" --no-git-tag-version
       - run: yarn --frozen-lockfile
       - run: yarn build
       - env:
