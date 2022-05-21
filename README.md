@@ -1,5 +1,8 @@
 # @a110/storybook-expand-all
 
+[![npm version](https://badge.fury.io/js/@a110%2Fstorybook-expand-all.svg)](
+  https://www.npmjs.com/package/@a110/storybook-expand-all)
+
 This Storybook Add On aims to expand all the items in the
 sidebar when the Storybook launches in the browser.
 
