@@ -21,7 +21,7 @@
   "description": "Expand all sidebar items at Storybook start",
   "main": "dist/preset.js",
   "scripts": {
-    "clean": "rimraf dist node_modules",
+    "clean": "rimraf dist node_modules/.cache",
     "build": "babel ./src --out-dir ./dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006"

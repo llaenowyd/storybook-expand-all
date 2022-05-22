@@ -9,22 +9,30 @@ import { addons } from '@storybook/addons'
 
 const ADDON_ID = '@a110/s-e-a'
 
-addons.register(
-  ADDON_ID,
-  (() => {
-    let hasExpanded = false
-
-    return api => {
-      const emitter = addons.getChannel()
-
-      emitter.on(CURRENT_STORY_WAS_SET, () => {
-        if (!hasExpanded) {
-          // "Calling on the next tick after storyRendered
-          //  seems to work reliably."
-          setTimeout(api.expandAll)
-          hasExpanded = true
-        }
-      })
-    }
-  })()
+const subscribeEvent = (emitter, event, callback) => (
+  emitter.on(event, callback), () => emitter.off(event, callback)
 )
+
+class ExpandAllOnce {
+  _emitter = addons.getChannel()
+  _api
+  _unsub
+
+  expandAll = () => {
+    this._api.expandAll()
+    this._unsub()
+  }
+
+  constructor(api) {
+    this._api = api
+    this._unsub = subscribeEvent(
+      this._emitter,
+      CURRENT_STORY_WAS_SET,
+      this.expandAll
+    )
+  }
+}
+
+addons.register(ADDON_ID, api => {
+  new ExpandAllOnce(api)
+})
