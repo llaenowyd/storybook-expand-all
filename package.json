@@ -33,7 +33,9 @@
   "keywords": [
     "storybook",
     "addons",
-    "storybook-addons"
+    "storybook-addons",
+    "appearance",
+    "layout"
   ],
   "author": {
     "name": "Collin Monahan",
