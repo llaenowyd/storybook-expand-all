@@ -1,7 +1,24 @@
 {
   "name": "@a110/storybook-expand-all",
+  "storybook": {
+    "displayName": "Expand-All",
+    "supportedFrameworks": [
+      "react",
+      "vue",
+      "angular",
+      "web-components",
+      "ember",
+      "html",
+      "svelte",
+      "preact",
+      "aurelia",
+      "marionette",
+      "react-native"
+    ],
+    "icon": "https://i.imgur.com/0AnnsTA.png"
+  },
   "version": "1.0.0",
-  "description": "\"A workaround that seems pretty solid\"",
+  "description": "Expand all sidebar items at Storybook start",
   "main": "dist/preset.js",
   "scripts": {
     "clean": "rimraf dist node_modules",
@@ -11,11 +28,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/llaenowyd/storybook-expand-all.git"
+    "url": "https://github.com/llaenowyd/storybook-expand-all"
   },
   "keywords": [
     "storybook",
-    "addons"
+    "addons",
+    "storybook-addons"
   ],
   "author": "Collin Monahan <llaenowyd@gmail.com>",
   "license": "ISC",
