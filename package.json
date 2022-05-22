@@ -35,8 +35,11 @@
     "addons",
     "storybook-addons"
   ],
-  "author": "Collin Monahan <llaenowyd@gmail.com>",
-  "license": "ISC",
+  "author": {
+    "name": "Collin Monahan",
+    "email": "llaenowyd@gmail.com"
+  },
+  "license": "MIT",
   "files": [
     "dist/**/*",
     "README.md",
