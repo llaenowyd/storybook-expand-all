@@ -21,10 +21,12 @@
   "description": "Expand all sidebar items at Storybook start",
   "main": "dist/preset.js",
   "scripts": {
-    "clean": "rimraf dist node_modules/.cache",
+    "clean": "rimraf dist node_modules/.cache storybook-static",
     "build": "babel ./src --out-dir ./dist",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006"
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "serve": "serve storybook-static"
   },
   "repository": {
     "type": "git",
@@ -70,6 +72,7 @@
     "babel-loader": "^8.2.5",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "serve": "^14.0.1"
   }
 }
